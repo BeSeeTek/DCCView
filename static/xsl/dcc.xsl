@@ -17,7 +17,7 @@
         <meta charset="UTF-8"/>
         <title>DCC Viewer</title>
         <!-- Link to production CSS -->
-        <link rel="stylesheet" type="text/css" href="/dccs/static/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/DCCView/static/css/style.css"/>
       </head>
       <body>
         <div id="app"></div>
@@ -32,7 +32,7 @@
         <!-- Load and initialize your JavaScript application with enhanced debugging -->
         <script type="module">
           <![CDATA[
-            import { init } from '/dccs/static/js/dccviewer-js.es.js';
+            import { init } from '/DCCView/static/js/dccviewer-js.es.js';
 
             // Retrieve the embedded XML from the textarea.
             const elem = document.getElementById('xmlContent');
