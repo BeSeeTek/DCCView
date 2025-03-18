@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DCC Viewer - Enter UUID</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    /* Basic styling for demonstration */
+    body { font-family: sans-serif; padding: 20px; }
+    form { margin: 0 auto; max-width: 400px; }
+    input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
+    input[type="submit"] { padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <h1>DCC Viewer</h1>
+  <form id="dccForm">
+    <label for="uuid">Enter DCC UUID:</label>
+    <input type="text" id="uuid" name="uuid"
+           value="fe245812-f6c1-4729-97fe-86b823f05825"
+           placeholder="e.g. fe245812-f6c1-4729-97fe-86b823f05825" required>
+    <input type="submit" value="Load DCC">
+  </form>
+
+  <script>
+    // Intercept the form submission to redirect to /dccs/<UUID>/
+    document.getElementById('dccForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var uuid = document.getElementById('uuid').value.trim();
+      if(uuid) {
+        window.location.href = "/dccs/" + encodeURIComponent(uuid) + ".xml";
+      }
+    });
+  </script>
+</body>
