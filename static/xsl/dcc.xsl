@@ -18,6 +18,7 @@
         <title>DCC Viewer</title>
         <!-- Link to production CSS -->
         <link rel="stylesheet" type="text/css" href="/DCCView/static/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/DCCView/static/css/styles.css"/>
       </head>
       <body>
         <div id="app"></div>

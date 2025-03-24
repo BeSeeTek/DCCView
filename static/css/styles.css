@@ -1,0 +1,243 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+#adminData, #measurementResults {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 4px;
+  text-align: center;
+}
+
+.plot-and-table, .plot-table {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px dashed #999;
+}
+
+/* Override Tippy's light theme padding */
+.tippy-box[data-theme~="light"] {
+  padding: 10px !important;  /* Increase padding */
+  font-size: 14px;  /* Adjust font size if needed */
+}
+
+.lang-select {
+  font-size: 16px;       /* Increase font size for better readability */
+  padding: 8px;          /* More padding makes it more touch-friendly */
+  width: 100%;           /* Use the available width */
+  max-width: 200px;      /* Optionally, limit the maximum width */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  border: 1px solid #ccc; /* Add a light border */
+  border-radius: 4px;    /* Soften the corners */
+}
+
+@media (max-width: 600px) {
+  .lang-select {
+    font-size: 18px;     /* Slightly larger on mobile devices */
+    padding: 10px;
+  }
+}
+
+/* Container for the entire toggle switch and its descriptive text */
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* The toggle switch itself */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider (background) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, change background */
+.toggle-switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* Move the circle when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Optional focus style */
+.toggle-switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* Adjust font size and spacing for the descriptive label */
+.toggle-label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Increase sizes for smaller screens */
+@media (max-width: 600px) {
+  .toggle-switch {
+    width: 70px;
+    height: 35px;
+  }
+  .slider:before {
+    height: 28px;
+    width: 28px;
+    left: 3px;
+    bottom: 3px;
+  }
+  .toggle-label {
+    font-size: 18px;
+  }
+}
+
+.mobile-control {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container for the entire toggle switch and its descriptive text */
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* The toggle switch itself */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider (background) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* When checked, change background color */
+.toggle-switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* Move the circle when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Focus style for accessibility */
+.toggle-switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* Label for toggle switch */
+.toggle-label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Increase sizes on smaller screens */
+@media (max-width: 600px) {
+  .mobile-control {
+    font-size: 18px;
+    padding: 12px;
+  }
+  .toggle-switch {
+    width: 70px;
+    height: 35px;
+  }
+  .slider:before {
+    height: 28px;
+    width: 28px;
+    left: 3px;
+    bottom: 3px;
+  }
+  .toggle-label {
+    font-size: 18px;
+  }
+}
